@@ -16,7 +16,7 @@
                         <td>{{despesa.nome}}</td>
                         <td>{{despesa.valor}}</td>
                         <td>
-                    <button class="delete "><div class="glyphicon glyphicon-trash"></div></button>
+                    <button class="delete" (click)="del(despesa.id)"><div class="glyphicon glyphicon-trash"></div></button>
                    </tr>
                 </tbody>
               </table>

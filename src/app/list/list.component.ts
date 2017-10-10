@@ -24,5 +24,10 @@ export class ListComponent implements OnInit {
     this.router.navigate(['/add']);
   }
 
+   del(despesaId: number): void {
+    this.despesaService.delete(despesaId);
+  }
+
+
 
 }

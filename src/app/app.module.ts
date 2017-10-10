@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RoutingModule } from './routing/routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LocalStorageModule } from 'angular-2-local-storage';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component' ;
@@ -21,7 +22,12 @@ import { DespesaService } from './despesa.service';
     BrowserModule,
     RoutingModule,
     NgbModule.forRoot(),
-    FormsModule
+    FormsModule,
+    LocalStorageModule.withConfig({
+      prefix: 'despesasApp',
+      storageType: 'localStorage'
+    })
+
   ],
   providers: [DespesaService],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { DespesaService } from '../despesa.service';
 import { Despesa } from '../despesa';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add',
@@ -12,7 +12,7 @@ import { Despesa } from '../despesa';
 export class AddComponent implements OnInit {
  despesa: Despesa;
 
-  constructor(private despesaService: DespesaService) { 
+  constructor(private despesaService: DespesaService, private router: Router) { 
   }
 
   ngOnInit() {
@@ -22,6 +22,7 @@ export class AddComponent implements OnInit {
 
    save(): void {
       this.despesaService.save(this.despesa);
+       this.router.navigate(['/list']);
   }
 
 
