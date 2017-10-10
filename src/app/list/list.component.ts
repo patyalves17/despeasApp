@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { DespesaService } from '../despesa.service';
 import { Despesa } from '../despesa';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -12,11 +13,16 @@ export class ListComponent implements OnInit {
    despesas: Despesa[];
 
 
-  constructor(private despesaService: DespesaService) { }
+  constructor(private despesaService: DespesaService,private router: Router) { }
 
   ngOnInit() {
     this.despesas = this.despesaService.getAll();
     console.log( this.despesas);
   }
+
+   add(): void {
+    this.router.navigate(['/add']);
+  }
+
 
 }
