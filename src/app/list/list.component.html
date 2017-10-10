@@ -12,7 +12,7 @@
                 <tbody>
                     <tr *ngFor="let despesa of despesas">
                         <td><div class="glyphicon {{despesa.icone}}"></div> {{despesa.tipo}}</td>
-                        <td>{{despesa.data | amTimeAgo}}</td>
+                        <td>{{despesa.data | amTimeAgo}}</td> 
                         <td>{{despesa.nome}}</td>
                         <td>{{despesa.valor | currency:'BRL':true:'1.2-2' | decimalBr}}</td>
                         <td>
