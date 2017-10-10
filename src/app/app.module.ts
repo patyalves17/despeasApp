@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component' ;
 import { AddComponent } from './add/add.component' ;
 
+import { DespesaService } from './despesa.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,7 @@ import { AddComponent } from './add/add.component' ;
     RoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [DespesaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
