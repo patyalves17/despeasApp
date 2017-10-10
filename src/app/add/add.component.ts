@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AddComponent implements OnInit {
  despesa: Despesa;
+  data: string;
 
   constructor(private despesaService: DespesaService, private router: Router) { 
   }
@@ -21,6 +22,7 @@ export class AddComponent implements OnInit {
   }
 
    save(): void {
+      this.despesa.data = new Date(this.data+"T12:00:00-03:00");
       this.despesaService.save(this.despesa);
        this.router.navigate(['/list']);
   }
