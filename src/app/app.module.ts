@@ -10,13 +10,15 @@ import { ListComponent } from './list/list.component' ;
 import { AddComponent } from './add/add.component' ;
 
 import { DespesaService } from './despesa.service';
+import { DecimalBrPipe } from './decimal-br.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    AddComponent
+    AddComponent,
+    DecimalBrPipe
   ],
   imports: [
     BrowserModule,
