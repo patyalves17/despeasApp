@@ -12,6 +12,9 @@ import { AddComponent } from './add/add.component' ;
 import { DespesaService } from './despesa.service';
 import { DecimalBrPipe } from './decimal-br.pipe';
 
+import {MomentModule} from 'angular2-moment';
+import 'moment/locale/pt-br';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { DecimalBrPipe } from './decimal-br.pipe';
     LocalStorageModule.withConfig({
       prefix: 'despesasApp',
       storageType: 'localStorage'
-    })
+    }),
+      MomentModule
 
   ],
   providers: [DespesaService],
